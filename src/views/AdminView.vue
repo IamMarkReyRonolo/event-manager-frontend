@@ -19,7 +19,7 @@
 					<v-container class="py-0 fill-height">
 						<v-avatar class="mr-5" color="grey darken-1" size="32"></v-avatar>
 						<p class="mr-10">Admin</p>
-						<v-btn text :to="'/user'" class="v-btn--active">
+						<v-btn text :to="'/admin'" class="v-btn--active">
 							Dashboard
 						</v-btn>
 

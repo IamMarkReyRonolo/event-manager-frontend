@@ -235,15 +235,15 @@
 		},
 
 		created() {
-			if (localStorage.getItem("token")) {
-				if (
-					localStorage.getItem("historyRoute") == "/user" ||
-					localStorage.getItem("historyRoute") == "/declined" ||
-					localStorage.getItem("historyRoute") == "/pending"
-				) {
-					this.$router.push("/user");
-				}
-			}
+			// if (localStorage.getItem("token")) {
+			// 	if (
+			// 		localStorage.getItem("historyRoute") == "/user" ||
+			// 		localStorage.getItem("historyRoute") == "/declined" ||
+			// 		localStorage.getItem("historyRoute") == "/pending"
+			// 	) {
+			// 		this.$router.push("/user");
+			// 	}
+			// }
 			localStorage.setItem("historyRoute", this.$route.fullPath);
 			this.getAdmin();
 		},

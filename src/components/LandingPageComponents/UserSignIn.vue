@@ -52,10 +52,10 @@
 						>
 							Sign-In
 						</v-btn>
-						<v-dialog hide-overlay persistent width="300">
+						<v-dialog hide-overlay persistent width="300" v-model="dialog2">
 							<v-card color="white" light>
 								<v-card-text>
-									<p mt-5>Adding event. Please wait.</p>
+									<p mt-5>Signing in. Please wait.</p>
 									<v-progress-linear
 										indeterminate
 										color="black"
@@ -89,7 +89,6 @@
 					const user = await userAPI.prototype.signInUser(this.user);
 
 					this.dialog2 = false;
-
 					localStorage.setItem("token", user.data.user.token);
 					this.$router.push("/user");
 				} catch (error) {
